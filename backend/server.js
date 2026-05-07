@@ -17,7 +17,15 @@ app.set('trust proxy', 1);
 connectDB();
 
 // Middleware
-app.use(cors());
+// CORS configuration for production
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'http://localhost:5000',
+    process.env.FRONTEND_URL || '*'
+  ],
+  credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

@@ -2,4 +2,6 @@ node_modules/
 .env
 .env.local
 .env.production
-*.log
+npm-debug.log
+yarn-error.log
+.DS_Store
