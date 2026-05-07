@@ -7,11 +7,11 @@ const connectDB = require('./config/db');
 // Load environment variables
 dotenv.config();
 
-// Trust proxy (needed for Railway)
-app.set('trust proxy', 1);
-
 // Create Express app
 const app = express();
+
+// Trust proxy (needed for Railway)
+app.set('trust proxy', 1);
 
 // Connect to MongoDB
 connectDB();
