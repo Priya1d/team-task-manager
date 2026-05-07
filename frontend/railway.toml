@@ -1,6 +1,5 @@
 [build]
-builder = "nixpacks"
 buildCommand = "npm run build"
 
-[start]
-cmd = "caddy file-server --listen :$PORT --root ./dist"
+[deploy]
+startCommand = "caddy file-server --listen :$PORT --root ./dist"
