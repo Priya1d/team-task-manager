@@ -2,4 +2,4 @@
 buildCommand = "npm run build"
 
 [deploy]
-startCommand = "caddy file-server --listen :$PORT --root ./dist"
+startCommand = "npx http-server ./dist -p $PORT"
